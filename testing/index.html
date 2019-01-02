@@ -1,0 +1,73 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript">
+
+function myFunction(name, lastname, age){
+
+	this.name=name;
+	this.lastname=lastname;
+	this.age= age;
+	
+	 this.show = function(){
+		return this.age;
+		
+	}
+}
+
+function printNekaj(){
+
+
+	if (document.getElementById('info').innerHTML=="" ){
+ var x= new myFunction("Primoz", "Pucko", 30);
+
+document.getElementById('info').innerHTML=x.name; 
+document.getElementById('info').innerHTML+="<br>"+x.show();
+document.getElementById('info').style.color="red";
+document.getElementById('info').style.fontSize="30";
+	} else {document.getElementById('info').innerHTML=""; }
+
+}
+
+var y = new myFunction("Primoz", "Pucko", 30);
+
+ function onmouseov(){
+
+
+	document.getElementById("info").innerHTML="monster";
+	document.getElementById("info").innerHTML+="<br>"+"not known age";
+	document.getElementById('info').style.color="red";
+	document.getElementById('info').style.fontSize="30";
+	document.getElementById('image').src="/monster.jpg";
+ }
+
+ function onmouseou(){
+
+document.getElementById("info").innerHTML="";
+document.getElementById('image').src="/rsz_slika.jpg";
+document.getElementById("info").innerHTML=y.name;
+	document.getElementById("info").innerHTML+="<br>"+y.age;
+
+}
+
+</script>
+
+</head>
+
+
+<body>
+
+<button onclick="printNekaj();">Izpisi</button>
+
+<div id="test">
+
+
+	<img id="image" src="/rsz_slika.jpg" onmouseover="onmouseov()" onmouseout="onmouseou()"/>
+	<div id="info">
+
+
+	</div>
+</div>
+</body>
+
+</html>

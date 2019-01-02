@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript">
+
+		function people(name, age){
+			this.name= name;
+			this.age = age;	
+			this.yearsUntilRetire = yearsLeft;
+		}
+		function yearsLeft(){
+			var numYears = 65 - this.age;
+			return numYears;	
+		}
+	
+		var natalie = new people("Natalie Portman", 31);
+		var natalie = new people("Bucky Roberts", 24);
+		
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	document.write(natalie.yearsUntilRetire());
+
+</script>
+</body>
+</html>
